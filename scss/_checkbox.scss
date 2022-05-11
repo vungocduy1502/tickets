@@ -1,0 +1,96 @@
+.checkbox-custom {
+  position: relative;
+
+  label {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    border-radius: 2px;
+
+    &:after {
+      content: "";
+      width: 9px;
+      height: 4px;
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      border: 3px solid #fff;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  span {
+    position: absolute;
+    width: 100px;
+    left: 30px;
+  }
+
+  input[type="checkbox"] {
+    visibility: hidden;
+
+    &:checked + label {
+      background: #0096ff;
+    }
+
+    &:checked + label:after {
+      opacity: 1;
+    }
+
+    &.checkbox-light-gray + label {
+      background: lighten(#d2d2d2, 10%);
+    }
+
+    &.checkbox-light-gray {
+      &:checked + label {
+        background: #d2d2d2;
+      }
+    }
+
+    &.checkbox-gray + label {
+      background: lighten(#95a5a6, 20%);
+    }
+
+    &.checkbox-gray {
+      &:checked + label {
+        background: #95a5a6;
+      }
+    }
+
+    &.checkbox-sky-blue + label {
+      background: lighten(#2ab7eb, 20%);
+    }
+
+    &.checkbox-sky-blue {
+      &:checked + label {
+        background: #2ab7eb;
+      }
+    }
+
+    &.checkbox-yellow + label {
+      background: lighten(#dec85e, 20%);
+    }
+
+    &.checkbox-yellow {
+      &:checked + label {
+        background: #dec85e;
+      }
+    }
+
+    &.checkbox-lavender + label {
+      background: lighten(#786bbf, 20%);
+    }
+
+    &.checkbox-lavender {
+      &:checked + label {
+        background: #786bbf;
+      }
+    }
+  }
+}

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>Tickets</title>
+</head>
+
+<body>
+    <header class="flex align-items-center">
+        <div class="icon mr-10"><i class="fa fa-bars"></i></div>
+        <h4 class="mr-auto">Tickets</h4>
+        <div class="icon"><i class="fa fa-bell"></i></div>
+        <div class="icon mr-10 ml-10"><i class="fa fa-camera-retro"></i></div>
+        <div class="icon"><i class="fa fa-file-text"></i></div>
+        <div class="text-right mr-10 ml-10 d-none d-md-block">
+            <p>Duy Anh</p>
+            <p>Spectos Asia | Leipziger Verkehrsbetriebi</p>
+        </div>
+        <img src="./images/avatar.jpg" class="header-avatar" alt="avatar"></img>
+    </header>
+    <div class="content overflow-md-hidden d-md-flex">
+        <div class="content-fillter">
+            <div class="fillter-search">
+                <div class="flex justify-content-between align-items-center mb-10">
+                    <h4>Search by keyword</h4>
+                    <i class="fa fa-times"></i>
+                </div>
+                <input type="text" class="btn w-100" placeholder="Search by keyword">
+            </div>
+            <h4 class="p-20">Fillter section</h4>
+            <div class="fillter-section">
+
+                <h4>Channel</h4>
+                <select class="w-100">
+                    <option value="volvo">All</option>
+                    <option value="saab">1</option>
+                    <option value="mercedes">2</option>
+                    <option value="audi">3</option>
+                </select>
+                <h4>Customer's last name:</h4>
+                <input type="text" class="btn w-100">
+                <h4>ID</h4>
+                <input type="text" class="btn w-100">
+                <h4>Spam:</h4>
+                <select class="w-100">
+                    <option value="volvo">Deactivated</option>
+                    <option value="saab">1</option>
+                    <option value="mercedes">2</option>
+                    <option value="audi">3</option>
+                </select>
+                <h4>Team:</h4>
+                <select class="w-100">
+                    <option value="volvo">Select Teams</option>
+                    <option value="saab">1</option>
+                    <option value="mercedes">2</option>
+                    <option value="audi">3</option>
+                </select>
+                <h4>Archive</h4>
+                <select class="w-100">
+                    <option value="volvo">Deactovated</option>
+                    <option value="saab">1</option>
+                    <option value="mercedes">2</option>
+                    <option value="audi">3</option>
+                </select>
+                <h4>Date of birth:</h4>
+                <div class="input-date-birth">
+                    <div>
+                        <p>From:</p>
+                        <input type="date" class="btn w-100">
+                    </div>
+                    <div>
+                        <p>To:</p>
+                        <input type="date" class="btn w-100">
+                    </div>
+                </div>
+                <h4></h4>
+                <div class="box-add-more-fillter">
+                    <select class="w-100">
+                        <option value="volvo">Add More Fillter</option>
+                        <option value="saab">1</option>
+                        <option value="mercedes">2</option>
+                        <option value="audi">3</option>
+                    </select>
+                    <button type="button" class="btn-plus">
+                        <i class="fa fa-plus"></i>
+                    </button>
+
+                </div>
+            </div>
+            <div class="fillter-status">
+                <h4>Status</h4>
+                <div class="checkbox-custom mt-5">
+                    <input type="checkbox" value="None" id="squaredcheck" class="checkbox-light-gray" name="check"
+                        checked />
+                    <label for="squaredcheck"><span>Select All</span></label>
+                </div>
+                <div class="checkbox-fillter">
+                    <div class="checkbox-custom">
+                        <input type="checkbox" value="None" id="squaredcheck" class="checkbox-gray" name="check"
+                            checked />
+                        <label for="squaredcheck"><span>Open</span></label>
+                    </div>
+                    <div class="checkbox-custom">
+                        <input type="checkbox" value="None" id="squaredcheck2" class="checkbox-sky-blue" name="check" />
+                        <label for="squaredcheck2"><span>In progress</span></label>
+                    </div>
+                    <div class="checkbox-custom">
+                        <input type="checkbox" value="None" id="squaredcheck3" class="checkbox-yellow" name="check" />
+                        <label for="squaredcheck3"><span>Temporary reply</span></label>
+                    </div>
+                    <div class="checkbox-custom">
+                        <input type="checkbox" value="None" id="squaredcheck4" class="checkbox-lavender" name="check" />
+                        <label for="squaredcheck4"><span>Misassigned</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="fillter-btn flex">
+                <button type="button" class="btn-reload">
+                    <i class="fa fa-refresh"></i>
+                </button>
+                <button type="button" class="btn ml-5">
+                    Apply
+                </button>
+            </div>
+        </div>
+        <div class="content-table p-20">
+            <div class="d-md-flex text-center">
+                <button type="button" class="btn mr-5 mb-10">
+                    <i class="fa fa-plus"></i> New Tickets
+                </button>
+                <button type="button" class="btn mr-5 mb-10">
+                    My Tickets
+                </button>
+                <button type="button" class="btn mr-5 mb-10">
+                    My Team Tickets
+                </button>
+                <button type="button" class="btn btn-a300 mr-auto">
+                    All Tickets
+                </button>
+                <button type="button" class="btn mr-5 mb-10 btn-b300">
+                    <i class="fa fa-download"></i> Export
+                </button>
+                <button type="button" class="btn-up-size-font mr-5 mb-10">
+                    A
+                </button>
+                <button type="button" class="btn-down-size-font">
+                    A
+                </button>
+            </div>
+            <div class="d-md-flex align-items-center justify-content-end text-center mb-20 mt-20">
+                <div class="flex align-items-center justify-content-center mb-5">
+                    <p>Open: <span class="color-open">435</span></p>
+                    <span class="ml-5 mr-5">|</span>
+                    <p>In progress: <span class="color-progress">61</span></p>
+                    <span class="ml-5 mr-5">|</span>
+                </div>
+                <div class="flex align-items-center justify-content-center mb-5">
+                    <p>Temporary reply: <span class="color-temporary">2</span></p>
+                    <span class="ml-5 mr-5">|</span>
+
+
+                    <p>Misassigned: <span class="color-misassigned">11</span></p>
+                    <span class="ml-5 mr-5">|</span>
+                </div>
+                <div class="flex align-items-center justify-content-center mb-5">
+                    <p>Dept, replled: <span class="color-dept">71</span></p>
+                    <span class="ml-5 mr-5">|</span>
+                    <p>Link: <span class="color-link">0</span></p>
+                    <span class="ml-5 mr-5">|</span>
+
+                    <p>Done: <span class="color-done">55148</span></p>
+                </div>
+            </div>
+            <div class="table_wrapper">
+                <div class="tableFixHead">
+                    <table class="table">
+                        <thead>
+                            <th class="sticky-first p-0" style="z-index: 4"> <input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </th>
+                            <th class="sticky-second" style="z-index: 4">
+                                <div class="flex justify-content-between">ID <i class="fa fa-caret-down"></i></div>
+                            </th>
+                            <th class=" th w-100px">
+                                <div class="flex justify-content-between align-items-center">Priority
+                                    <div class="icon-fillter">
+                                        <p><i class="fa fa-caret-up"></i></p>
+                                        <p><i class="fa fa-caret-down"></i></p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class=" th w-100px">
+                                <div class="flex justify-content-between align-items-center">Create on
+                                    <div class="icon-fillter">
+                                        <p><i class="fa fa-caret-up"></i></p>
+                                        <p><i class="fa fa-caret-down"></i></p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class=" th w-100px w-300px">
+                                <div class="flex justify-content-between align-items-center">
+                                    Category > Topic > Subtopic
+                                    <div class="icon-fillter">
+                                        <p><i class="fa fa-caret-up"></i></p>
+                                        <p><i class="fa fa-caret-down"></i></p>
+                                    </div>
+                            </th>
+                            <th class=" th w-50px">
+                                <div class="flex justify-content-end">
+                                    <div class="icon-fillter">
+                                        <p><i class="fa fa-caret-up"></i></p>
+                                        <p><i class="fa fa-caret-down"></i></p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class=" th w-100px">
+                                <div class="flex justify-content-between align-items-center">Customer
+                                    <div class="icon-fillter">
+                                        <p><i class="fa fa-caret-up"></i></p>
+                                        <p><i class="fa fa-caret-down"></i></p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class=" th w-100px">
+                                <div class="flex justify-content-between align-items-center">Due Date
+                                    <div class="icon-fillter">
+                                        <p><i class="fa fa-caret-up"></i></p>
+                                        <p><i class="fa fa-caret-down"></i></p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class=" th w-50px">
+                                <div class="flex justify-content-end">
+                                    <div class="icon-fillter">
+                                        <p><i class="fa fa-caret-up"></i></p>
+                                        <p><i class="fa fa-caret-down"></i></p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class=" th w-100px">
+                                Assignee
+                            </th>
+                            <th class=" th w-100px">
+                                Assignee
+                            </th>
+                            <th class=" th w-100px">
+                                Assignee
+                            </th>
+                            <th class=" th w-100px">
+                                Assignee
+                            </th>
+                        </thead>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-first background-fff td p-0"><input type="checkbox" value="" id=""
+                                    class="checkbox" name="checkbox" />
+                                <label for="checkbox"></label>
+                            </td>
+                            <td class="sticky-second background-fff td"><a href="detail.html">22.0000</a></td>
+                            <td class="td w-100px">
+                                <p class="protority">N</p>
+                            </td>
+                            <td class="td w-100px">05/02/2022</td>
+                            <td class="td w-300px "><a href="#">Fiexa > Hinweise zur Flexa-App</a></td>
+                            <td class="td w-50px "><i class="fa fa-comment-o">&nbsp;0</i></td>
+                            <td class="td w-100px">Theres Ehrlich</td>
+                            <td class="td w-100px">05/09/2022</td>
+                            <td class="td w-50px "><i class="fa fa-thumbs-up"></i></td>
+                            <td class="td w-100px">Duy An</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                            <td class="td w-100px">test1</td>
+                        </tr>
+                    </table>
+
+
+                </div>
+
+            </div>
+
+</body>
+
+</html>

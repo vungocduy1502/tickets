@@ -1,0 +1,226 @@
+select {
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid #e4e4e4;
+  height: 40px;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .overflow-md-hidden {
+    overflow: hidden;
+    height: calc(100vh - 50px);
+  }
+
+  .d-md-flex {
+    display: flex;
+  }
+
+  .d-md-block {
+    display: block;
+  }
+
+
+  .w-md-70 {
+    width: 70%
+  }
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-20 {
+  padding: 20px
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.grid-3 {
+  display: grid;
+  padding: 10px 20px;
+  grid-template-columns: 33.333% 33.333% 33.333%;
+  grid-gap: 20px 10px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 40% 20% 30% 5%;
+  margin: 10px 0;
+  grid-gap: 20px 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .fillter-section,
+  .box-add-more-fillter,
+  .checkbox-fillter {
+    display: block !important;
+
+    select,
+    input,
+    .dropdown {
+      margin: 10px auto 20px;
+    }
+  }
+
+  .input-date-birth {
+    display: block !important;
+
+    div {
+      width: 100% !important;
+    }
+
+    p {
+      font-size: 15px;
+      color: #bbb6b9;
+    }
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  header {
+    width: 100%;
+  }
+
+
+
+  .content-header {
+    width: 100%;
+  }
+
+  .content-fillter {
+    width: calc(100% + 40px) !important;
+    height: 250px !important;
+  }
+
+  .content-table {
+    width: 100% !important;
+  }
+
+  .content-box {
+    width: 100%;
+  }
+
+  .grid-3 {
+    grid-template-columns: 100%;
+  }
+
+  .grid-4 {
+    grid-template-columns: 80% 20%;
+  }
+}
