@@ -10,18 +10,160 @@
 
 <body>
 	<style type='text/css'>
+		div {
+			max-width: 400px;
+			max-height: 150px;
+			overflow: scroll;
+		}
 
+
+		/* Use position: sticky to have it stick to the edge
+ * and top, right, or left to choose which edge to stick to: */
+
+		thead th {
+			position: -webkit-sticky;
+			/* for Safari */
+			position: sticky;
+			top: 0;
+		}
+
+		tbody th {
+			position: -webkit-sticky;
+			/* for Safari */
+			position: sticky;
+			left: 0;
+			background-color: #FFF
+		}
+
+		tbody td:nth-child(2) {
+			/* for Safari */
+			position: sticky;
+			left: 50px;
+			background-color: #FFF
+		}
+
+		.a1 {
+			width: 50px;
+		}
+
+		/* To have the header in the first column stick to the left: */
+
+		thead th:first-child {
+			left: 0;
+			z-index: 1;
+		}
+
+		thead th:nth-child(2) {
+			left: 50px;
+			z-index: 1;
+		}
+
+		thead td:nth-child(2) {
+			left: 50px;
+			z-index: 1;
+		}
+
+		/* Just to display it nicely: */
+
+		thead th {
+			background: #000;
+			color: #FFF;
+		}
+
+		tbody th {
+			background: #FFF;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		td,
+		th {
+			padding: 0.5em;
+		}
 	</style>
 	</head>
 
 	<body>
-		<select class="form-control">
-			<option>Option 1</option>
-			<option>Option 2</option>
-			<option>Option 3</option>
-		</select>
-
-
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th class="a1">1</th>
+						<th class="a2">headheadhead</th>
+						<th>headheadhead</th>
+						<th>headheadhead</th>
+						<th>headheadhead</th>
+						<th>headheadhead</th>
+						<th>headheadhead</th>
+						<th>headheadhead</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="a1">head</th>
+						<td class="a2">body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+					</tr>
+					<tr>
+						<th class="a1">head</th>
+						<td class="a2">body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+					</tr>
+					<tr>
+						<th class="a1">head</th>
+						<td class="a2">body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+					</tr>
+					<tr>
+						<th class="a1">head</th>
+						<td class="a2">body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+					</tr>
+					<tr>
+						<th class="a1">head</th>
+						<td class="a2">body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+					</tr>
+					<tr>
+						<th class="a1">head</th>
+						<td class="a2">body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+						<td>body</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 		<script src="script.js"></script>
 	</body>

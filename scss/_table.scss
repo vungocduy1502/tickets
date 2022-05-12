@@ -4,14 +4,19 @@
   table {
     width: 100%;
     border-collapse: collapse;
+
+    td {
+      white-space: nowrap;
+    }
   }
 
   .th {
     height: 56px;
     padding: 0px 16px;
     text-align: left;
-    background-color: #fafafa;
-    border: 2px solid #fff;
+    background-color: #ececec;
+    border: 1px solid #dddddd;
+
   }
 
   .td {
@@ -20,7 +25,7 @@
     padding: 0px 16px;
     overflow: hidden;
     // text-align: left;
-    border-bottom: 1px solid #dddddd;
+    border: 1px solid #dddddd;
 
     &:first-child {
       padding: 0;
@@ -45,7 +50,7 @@
 .sticky-first {
   position: sticky;
   left: 0;
-  background-color: #fafafa;
+  background-color: #ececec;
   width: 50px;
   min-width: 50px;
   max-width: 50px;
@@ -53,8 +58,8 @@
   max-height: 56px;
   // overflow: hidden;
   text-align: center;
-  // border-right: 2px solid #fff;
   z-index: 3;
+  border: 1px solid #dddddd;
 
   &.background-fff {
     background-color: #fff;
@@ -64,12 +69,13 @@
 .sticky-second {
   padding: 0 20px;
   position: sticky;
-  left: 51px;
-  background-color: #fafafa;
+  left: 50px;
+  background-color: #ececec;
   width: 70px;
   min-width: 70px;
   max-width: 70px;
   z-index: 3;
+  border: 1px solid #dddddd;
 
   &.background-fff {
     background-color: #fff;
